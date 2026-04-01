@@ -9,6 +9,7 @@ const navLinks = [
   { href: "#trang-chu", label: "Trang chủ" },
   { href: "#san-pham", label: "Sản phẩm" },
   { href: "#quy-trinh", label: "Quy trình" },
+  { href: "#bao-gia", label: "Báo giá" },
   { href: "#danh-gia", label: "Đánh giá" },
   { href: "#lien-he", label: "Liên hệ" },
 ]

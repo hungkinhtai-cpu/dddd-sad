@@ -4,6 +4,7 @@ import { CommitmentsSection } from "@/components/commitments-section"
 import { VeltrioSection } from "@/components/veltrio-section"
 import { ProductsSection } from "@/components/products-section"
 import { ProcessSection } from "@/components/process-section"
+import { QuoteSection } from "@/components/quote-section"
 import { GallerySection } from "@/components/gallery-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { ContactSection } from "@/components/contact-section"
@@ -19,6 +20,7 @@ export default function HomePage() {
       <VeltrioSection />
       <ProductsSection />
       <ProcessSection />
+      <QuoteSection />
       <GallerySection />
       <TestimonialsSection />
       <ContactSection />
