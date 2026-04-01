@@ -79,20 +79,20 @@ export function Footer() {
             <h4 className="font-bold text-background mb-4">Liên hệ</h4>
             <ul className="space-y-3">
               <li>
-                <a href="tel:0903107097" className="flex items-center gap-2 text-background/70 hover:text-primary transition-colors text-sm">
+                <a href="tel:0913019397" className="flex items-center gap-2 text-background/70 hover:text-primary transition-colors text-sm">
                   <Phone className="w-4 h-4" />
-                  0903 107 097
+                  0913 019 397
                 </a>
               </li>
               <li>
                 <a 
-                  href="https://zalo.me/0903107097" 
+                  href="https://zalo.me/0913019397" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-background/70 hover:text-primary transition-colors text-sm"
                 >
                   <MessageCircle className="w-4 h-4" />
-                  Zalo: 0903 107 097
+                  Zalo: 0913 019 397
                 </a>
               </li>
               <li className="flex items-start gap-2 text-background/70 text-sm">

@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Phone, Menu, X, MessageCircle } from "lucide-react"
+import { Phone, Menu, X, MessageCircle, Facebook } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navLinks = [
@@ -48,17 +48,28 @@ export function Header() {
               asChild
               variant="outline"
               size="sm"
+              className="hidden md:flex border-[#1877F2] text-[#1877F2] hover:bg-[#1877F2] hover:text-white"
+            >
+              <a href="https://www.facebook.com/share/1K54efbgaz/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+                <Facebook className="w-4 h-4 mr-2" />
+                Facebook
+              </a>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              size="sm"
               className="hidden md:flex border-primary text-primary hover:bg-primary hover:text-primary-foreground"
             >
-              <a href="https://zalo.me/0903107097" target="_blank" rel="noopener noreferrer">
+              <a href="https://zalo.me/0913019397" target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="w-4 h-4 mr-2" />
                 Zalo
               </a>
             </Button>
             <Button asChild size="sm" className="bg-primary hover:bg-primary/90">
-              <a href="tel:0903107097">
+              <a href="tel:0913019397">
                 <Phone className="w-4 h-4 mr-2" />
-                <span className="hidden sm:inline">0903 107 097</span>
+                <span className="hidden sm:inline">0913 019 397</span>
                 <span className="sm:hidden">Gọi ngay</span>
               </a>
             </Button>
@@ -89,7 +100,16 @@ export function Header() {
                 </Link>
               ))}
               <a
-                href="https://zalo.me/0903107097"
+                href="https://www.facebook.com/share/1K54efbgaz/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="md:hidden px-4 py-3 text-[#1877F2] hover:bg-muted rounded-lg font-medium transition-colors flex items-center gap-2"
+              >
+                <Facebook className="w-5 h-5" />
+                Facebook
+              </a>
+              <a
+                href="https://zalo.me/0913019397"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="md:hidden px-4 py-3 text-primary hover:bg-muted rounded-lg font-medium transition-colors flex items-center gap-2"

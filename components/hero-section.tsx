@@ -43,9 +43,9 @@ export function HeroSection() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8">
-                <a href="tel:0903107097">
+                <a href="tel:0913019397">
                   <Phone className="w-5 h-5 mr-2" />
-                  Gọi Ngay: 0903 107 097
+                  Gọi Ngay: 0913 019 397
                 </a>
               </Button>
               <Button
@@ -54,7 +54,7 @@ export function HeroSection() {
                 size="lg"
                 className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground text-lg px-8"
               >
-                <a href="https://zalo.me/0903107097" target="_blank" rel="noopener noreferrer">
+                <a href="https://zalo.me/0913019397" target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="w-5 h-5 mr-2" />
                   Chat Zalo
                 </a>

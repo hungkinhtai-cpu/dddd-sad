@@ -1,4 +1,4 @@
-import { Phone, MessageCircle, MapPin, Clock, Mail } from "lucide-react"
+import { Phone, MessageCircle, MapPin, Clock, Facebook } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function ContactSection() {
@@ -23,8 +23,8 @@ export function ContactSection() {
                 </div>
                 <div>
                   <p className="font-bold text-foreground mb-1">Hotline</p>
-                  <a href="tel:0903107097" className="text-primary text-xl font-bold hover:underline">
-                    0903 107 097
+                  <a href="tel:0913019397" className="text-primary text-xl font-bold hover:underline">
+                    0913 019 397
                   </a>
                 </div>
               </div>
@@ -36,7 +36,7 @@ export function ContactSection() {
                 <div>
                   <p className="font-bold text-foreground mb-1">Zalo</p>
                   <a 
-                    href="https://zalo.me/0903107097" 
+                    href="https://zalo.me/0913019397" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-primary hover:underline"
@@ -71,11 +71,28 @@ export function ContactSection() {
                   </p>
                 </div>
               </div>
+
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-[#1877F2]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Facebook className="w-6 h-6 text-[#1877F2]" />
+                </div>
+                <div>
+                  <p className="font-bold text-foreground mb-1">Fanpage Facebook</p>
+                  <a 
+                    href="https://www.facebook.com/share/1K54efbgaz/?mibextid=wwXIfr" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-[#1877F2] hover:underline"
+                  >
+                    Theo dõi Kính Tài trên Facebook
+                  </a>
+                </div>
+              </div>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-                <a href="tel:0903107097">
+                <a href="tel:0913019397">
                   <Phone className="w-5 h-5 mr-2" />
                   Gọi Ngay
                 </a>
@@ -86,7 +103,7 @@ export function ContactSection() {
                 size="lg"
                 className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
               >
-                <a href="https://zalo.me/0903107097" target="_blank" rel="noopener noreferrer">
+                <a href="https://zalo.me/0913019397" target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="w-5 h-5 mr-2" />
                   Chat Zalo
                 </a>
