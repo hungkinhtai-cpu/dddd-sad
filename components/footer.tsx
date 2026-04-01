@@ -97,7 +97,7 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-2 text-background/70 text-sm">
                 <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
-                <span>Quận 5, Bình Tân, TP.HCM</span>
+                <span>374 An Dương Vương, P.4, Q.5, TP.HCM</span>
               </li>
             </ul>
           </div>

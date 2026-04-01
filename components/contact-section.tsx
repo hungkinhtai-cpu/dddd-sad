@@ -51,10 +51,10 @@ export function ContactSection() {
                   <MapPin className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <p className="font-bold text-foreground mb-1">Khu vực phục vụ</p>
+                  <p className="font-bold text-foreground mb-1">Địa chỉ cửa hàng</p>
                   <p className="text-muted-foreground">
-                    Quận 5, Bình Tân, và toàn bộ TP.HCM<br />
-                    Dịch vụ tận nơi - Không cần di chuyển
+                    <strong>374 An Dương Vương, Phường 4, Quận 5, TP.HCM</strong><br />
+                    Dịch vụ tận nơi toàn TP.HCM và các tỉnh lân cận
                   </p>
                 </div>
               </div>
@@ -115,14 +115,14 @@ export function ContactSection() {
           <div className="relative">
             <div className="bg-card rounded-xl border border-border overflow-hidden h-full min-h-[400px]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125415.54855753!2d106.57371799999999!3d10.775844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f38f9ed887b%3A0x14aded5703768989!2zSG8gQ2hpIE1pbmggQ2l0eSwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1709726159012!5m2!1sen!2s"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.6694!2d106.6687!3d10.7569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f16d3f5bb7d%3A0x4c0c0c0c0c0c0c0c!2s374%20An%20D%C6%B0%C6%A1ng%20V%C6%B0%C6%A1ng%2C%20Ph%C6%B0%E1%BB%9Dng%204%2C%20Qu%E1%BA%ADn%205%2C%20H%E1%BB%93%20Ch%C3%AD%20Minh!5e0!3m2!1svi!2s!4v1709726159012!5m2!1svi!2s"
                 width="100%"
                 height="100%"
                 style={{ border: 0, minHeight: "400px" }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Vị trí Kính Ô Tô Kính Tài"
+                title="Kính Ô Tô Kính Tài - 374 An Dương Vương, Q.5, TP.HCM"
               />
             </div>
           </div>
