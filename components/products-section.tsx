@@ -6,25 +6,25 @@ const products = [
     name: "Kính Lái (Trước)",
     description: "Kính chắn gió phía trước xe, đảm bảo tầm nhìn tối ưu cho người lái",
     features: ["Kính cường lực an toàn", "Chống tia UV", "Độ trong suốt cao", "Phù hợp mọi dòng xe"],
-    image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400&h=300&fit=crop",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/z7680776836874_530fc6c822e7ffd3ac173e70dd0f6297-shKGlIqe0OLBEYT4hhh86w6ePBD8xH.jpg",
   },
   {
     name: "Kính Hậu (Sau)",
     description: "Kính phía sau xe với chức năng sấy kính tích hợp",
     features: ["Tích hợp dây sấy kính", "Chống chói", "Độ bền cao", "Lắp đặt chuẩn xác"],
-    image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400&h=300&fit=crop",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/z7680776848244_6eccaa74c31bd85206a58ee9aeae8967-p7G019CN9P2UUGZCgx87MSgS2ZkdqT.jpg",
   },
   {
     name: "Kính Hông (Cửa)",
     description: "Kính cửa sổ hai bên xe, đa dạng loại cố định và tự động",
     features: ["Kính cố định & tự động", "Chống vỡ vụn", "Cách âm tốt", "Nhiều mẫu mã"],
-    image: "https://images.unsplash.com/photo-1542282088-fe8426682b8f?w=400&h=300&fit=crop",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/z7680776846897_a4185ecd236febdcc7afd3c709507ea2-kyavyD9Tol8jCoWoE31SoXdDzkV4kg.jpg",
   },
   {
     name: "Kính Cánh (Tam Giác)",
     description: "Kính tam giác góc cửa, kính góc chết và các loại kính phụ",
     features: ["Kính góc chết", "Kính tam giác", "Kính nóc xe", "Đa dạng kích thước"],
-    image: "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=400&h=300&fit=crop",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/z7680776863245_8f792765a27c77b30e549399dab15d28-5nSwdSEgy0CSDtjtfNHKMWZXswjj4W.jpg",
   },
 ]
 

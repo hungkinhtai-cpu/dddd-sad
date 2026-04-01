@@ -21,14 +21,12 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 md:w-12 md:h-12 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg md:text-xl">KT</span>
-            </div>
-            <div className="hidden sm:block">
-              <p className="font-bold text-foreground text-sm md:text-base">Kính Ô Tô</p>
-              <p className="text-primary font-semibold text-xs md:text-sm">KÍNH TÀI</p>
-            </div>
+          <Link href="/" className="flex items-center">
+            <img 
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/z7680776867254_c2d23a0384271162dd1c969c04efa997-sXqrtFGhuU4MbEfglnIofqmCweyAwy.jpg" 
+              alt="Kính Tài - Chuyên Kính Xe Hơi & Dịch Vụ"
+              className="h-12 md:h-14 w-auto object-contain"
+            />
           </Link>
 
           {/* Desktop Navigation */}

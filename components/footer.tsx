@@ -8,14 +8,12 @@ export function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold">KT</span>
-              </div>
-              <div>
-                <p className="font-bold text-background">Kính Ô Tô</p>
-                <p className="text-primary text-sm font-semibold">KÍNH TÀI</p>
-              </div>
+            <div className="mb-4">
+              <img 
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/z7680776867254_c2d23a0384271162dd1c969c04efa997-sXqrtFGhuU4MbEfglnIofqmCweyAwy.jpg" 
+                alt="Kính Tài - Chuyên Kính Xe Hơi & Dịch Vụ"
+                className="h-16 w-auto object-contain rounded-lg"
+              />
             </div>
             <p className="text-background/70 text-sm mb-4">
               15 năm kinh nghiệm trong lĩnh vực thay kính ô tô. 

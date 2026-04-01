@@ -67,8 +67,8 @@ export function HeroSection() {
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent z-10" />
               <img
-                src="https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=800&h=600&fit=crop"
-                alt="Thay kính ô tô chuyên nghiệp"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/z7680776853602_6d53eba875bcdb8f420191ddf23e473d-DoWVbcDrRMLsZknHZkN72YO8EovBBg.jpg"
+                alt="Thợ kỹ thuật Kính Tài đang thay kính xe Mercedes"
                 className="w-full h-full object-cover"
               />
             </div>
