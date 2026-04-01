@@ -14,18 +14,6 @@ const products = [
     features: ["Tích hợp dây sấy kính", "Chống chói", "Độ bền cao", "Lắp đặt chuẩn xác"],
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/z7680776848244_6eccaa74c31bd85206a58ee9aeae8967-p7G019CN9P2UUGZCgx87MSgS2ZkdqT.jpg",
   },
-  {
-    name: "Kính Hông (Cửa)",
-    description: "Kính cửa sổ hai bên xe, đa dạng loại cố định và tự động",
-    features: ["Kính cố định & tự động", "Chống vỡ vụn", "Cách âm tốt", "Nhiều mẫu mã"],
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/z7680776846897_a4185ecd236febdcc7afd3c709507ea2-kyavyD9Tol8jCoWoE31SoXdDzkV4kg.jpg",
-  },
-  {
-    name: "Kính Cánh (Tam Giác)",
-    description: "Kính tam giác góc cửa, kính góc chết và các loại kính phụ",
-    features: ["Kính góc chết", "Kính tam giác", "Kính nóc xe", "Đa dạng kích thước"],
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/z7680776863245_8f792765a27c77b30e549399dab15d28-5nSwdSEgy0CSDtjtfNHKMWZXswjj4W.jpg",
-  },
 ]
 
 export function ProductsSection() {
@@ -34,10 +22,10 @@ export function ProductsSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            Sản Phẩm <span className="text-primary">Kính Ô Tô Veltrio</span>
+            <span className="text-primary">Sản Phẩm Kính Ô Tô</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Đa dạng các loại kính cho mọi vị trí trên xe, phù hợp với tất cả các dòng xe phổ biến
+            Kính lái và kính hậu chất lượng cao, phù hợp với tất cả các dòng xe phổ biến
           </p>
         </div>
 

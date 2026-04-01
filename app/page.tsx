@@ -1,6 +1,7 @@
 import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
 import { CommitmentsSection } from "@/components/commitments-section"
+import { VeltrioSection } from "@/components/veltrio-section"
 import { ProductsSection } from "@/components/products-section"
 import { ProcessSection } from "@/components/process-section"
 import { GallerySection } from "@/components/gallery-section"
@@ -15,6 +16,7 @@ export default function HomePage() {
       <Header />
       <HeroSection />
       <CommitmentsSection />
+      <VeltrioSection />
       <ProductsSection />
       <ProcessSection />
       <GallerySection />
