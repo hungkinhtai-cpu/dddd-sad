@@ -15,22 +15,10 @@ export const metadata: Metadata = {
   description: 'Kính Ô Tô Kính Tài - Chuyên thay kính xe hơi chính hãng Veltrio, dịch vụ tận nơi, bảo hành 12 tháng. 15 năm kinh nghiệm tại Quận 5 và Bình Tân TP.HCM.',
   generator: 'v0.app',
   keywords: ['thay kính ô tô', 'kính xe hơi', 'kính Veltrio', 'thay kính tận nơi', 'Quận 5', 'Bình Tân', 'TP.HCM'],
+  // Đã xóa bỏ các icon cũ để trình duyệt chỉ nhận diện ảnh mới này
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: '/z7680776867254_c2d23a0384271162dd1c969c04efa997.jpg',
+    apple: '/z7680776867254_c2d23a0384271162dd1c969c04efa997.jpg',
   },
 }
 
