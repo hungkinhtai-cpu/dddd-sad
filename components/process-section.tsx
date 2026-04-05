@@ -1,4 +1,4 @@
-import { Phone, FileSearch, Wrench, CheckCircle } from "lucide-react"
+import { Phone, FileSearch, Wrench, CheckCircle, MapPin } from "lucide-react"
 
 const steps = [
   {
@@ -40,15 +40,14 @@ export function ProcessSection() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-16">
           {steps.map((item, index) => (
             <div key={index} className="relative">
-              {/* Connector Line */}
               {index < steps.length - 1 && (
                 <div className="hidden lg:block absolute top-12 left-[60%] w-[80%] h-0.5 bg-primary/20" />
               )}
               
-              <div className="bg-card p-6 rounded-xl border border-border hover:border-primary/50 transition-colors relative z-10">
+              <div className="bg-card p-6 rounded-xl border border-border hover:border-primary/50 transition-colors relative z-10 h-full">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-14 h-14 bg-primary rounded-lg flex items-center justify-center">
                     <item.icon className="w-7 h-7 text-primary-foreground" />
@@ -60,6 +59,53 @@ export function ProcessSection() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* --- PHẦN VIDEO REELS VÀ ĐỊA CHỈ CHI NHÁNH --- */}
+        <div className="flex flex-col items-center pt-12 border-t border-primary/10">
+          <h3 className="text-xl md:text-2xl font-bold text-primary mb-2 uppercase text-center">
+            Video Quy Trình Thực Tế
+          </h3>
+          <p className="text-muted-foreground mb-8 italic text-center">
+            Cận cảnh thợ Kính Tài thi công chuyên nghiệp cho khách hàng
+          </p>
+          
+          <div className="w-full max-w-[340px] aspect-[9/16] bg-black rounded-3xl overflow-hidden shadow-2xl border-4 border-white mb-12">
+            <video 
+              autoPlay 
+              muted 
+              loop 
+              playsInline 
+              controls
+              className="w-full h-full object-cover"
+            >
+              <source src="/quy-trinh-gan-kinh.mp4" type="video/mp4" />
+            </video>
+          </div>
+          
+          <div className="w-full max-w-4xl grid md:grid-cols-2 gap-6">
+            {/* Chi nhánh 1 */}
+            <div className="bg-card p-6 rounded-2xl border border-border shadow-sm flex gap-4 items-start">
+              <MapPin className="w-6 h-6 text-primary shrink-0 mt-1" />
+              <div>
+                <p className="font-bold text-foreground uppercase text-sm mb-1">Chi nhánh Quận 5</p>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  374 An Dương Vương, Phường 4, Quận 5, TP.HCM
+                </p>
+              </div>
+            </div>
+
+            {/* Chi nhánh 2 */}
+            <div className="bg-card p-6 rounded-2xl border border-border shadow-sm flex gap-4 items-start">
+              <MapPin className="w-6 h-6 text-primary shrink-0 mt-1" />
+              <div>
+                <p className="font-bold text-foreground uppercase text-sm mb-1">Chi nhánh Bình Tân</p>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  1/117 Đường số 1, KDC Nam Hùng Vương, P. An Lạc, Bình Tân, TP.HCM
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
