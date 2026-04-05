@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Be_Vietnam_Pro, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import Script from 'next/script'
 import './globals.css'
 
 const beVietnam = Be_Vietnam_Pro({ 
@@ -15,7 +16,6 @@ export const metadata: Metadata = {
   description: 'Kính Ô Tô Kính Tài - Chuyên thay kính xe hơi chính hãng Veltrio, dịch vụ tận nơi, bảo hành 12 tháng. 15 năm kinh nghiệm tại Quận 5 và Bình Tân TP.HCM.',
   generator: 'v0.app',
   keywords: ['thay kính ô tô', 'kính xe hơi', 'kính Veltrio', 'thay kính tận nơi', 'Quận 5', 'Bình Tân', 'TP.HCM'],
-  // Đã xóa bỏ các icon cũ để trình duyệt chỉ nhận diện ảnh mới này
   icons: {
     icon: '/z7680776867254_c2d23a0384271162dd1c969c04efa997.jpg',
     apple: '/z7680776867254_c2d23a0384271162dd1c969c04efa997.jpg',
@@ -32,6 +32,30 @@ export default function RootLayout({
       <body className={`${beVietnam.variable} font-sans antialiased`}>
         {children}
         <Analytics />
+
+        {/* --- PHẦN DÁN CODE BUFF TRAFFIC VÀO CUỐI TRANG --- */}
+        <footer className="mt-10 pb-5 flex justify-center">
+          <Script src="https://s.traffic100.com/s/script-100.js" strategy="lazyOnload" />
+          <div 
+            id="get-code-website" 
+            style={{ 
+              display: 'inline-block',
+              width: '200px',
+              height: '50px',
+              paddingTop: '10px',
+              fontSize: '16px',
+              fontWeight: 'bold',
+              textAlign: 'center',
+              borderRadius: '8px',
+              backgroundColor: '#4CAF50',
+              color: '#fff',
+              cursor: 'pointer'
+            }}
+          >
+            <span>Lấy Code</span>
+          </div>
+        </footer>
+        {/* ----------------------------------------------- */}
       </body>
     </html>
   )
