@@ -1,4 +1,66 @@
-{/* --- PHẦN VIDEO VÀ DANH SÁCH CHI NHÁNH KÍNH TÀI --- */}
+import { Star, Quote } from "lucide-react"
+
+const testimonials = [
+  {
+    name: "Anh Minh",
+    location: "Quận 5, TP.HCM",
+    car: "Toyota Camry",
+    content: "Dịch vụ rất tốt, kỹ thuật viên nhiệt tình và chuyên nghiệp. Kính thay xong đẹp như mới, giá cả hợp lý. Sẽ giới thiệu cho bạn bè.",
+    rating: 5,
+  },
+  {
+    name: "Chị Hương",
+    location: "Bình Tân, TP.HCM",
+    car: "Mazda CX-5",
+    content: "Thay kính tận nơi rất tiện lợi, không cần di chuyển xe. Anh thợ làm việc cẩn thận, sạch sẽ. Bảo hành 12 tháng nên rất yên tâm.",
+    rating: 5,
+  },
+  {
+    name: "Anh Tuấn",
+    location: "Quận 6, TP.HCM",
+    car: "Honda City",
+    content: "Đã thay kính ở đây 2 lần, lần nào cũng hài lòng. Giá rẻ hơn hãng nhiều mà chất lượng kính tương đương. Highly recommend!",
+    rating: 5,
+  },
+]
+
+export function TestimonialsSection() {
+  return (
+    <section id="danh-gia" className="py-16 md:py-24 bg-background">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">
+            Khách Hàng <span className="text-primary">Đánh Giá</span>
+          </h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Hơn 10,000 khách hàng đã tin tưởng sử dụng dịch vụ của Kính Tài
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-16">
+          {testimonials.map((item, index) => (
+            <div
+              key={index}
+              className="bg-card p-6 rounded-xl border border-border hover:shadow-lg transition-shadow"
+            >
+              <Quote className="w-10 h-10 text-primary/20 mb-4" />
+              <p className="text-foreground mb-6 leading-relaxed">{item.content}</p>
+              
+              <div className="flex items-center gap-1 mb-4">
+                {Array.from({ length: item.rating }).map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-accent text-accent" />
+                ))}
+              </div>
+              
+              <div className="border-t border-border pt-4">
+                <p className="font-bold text-foreground">{item.name}</p>
+                <p className="text-muted-foreground text-sm">{item.car} - {item.location}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* --- PHẦN VIDEO QUY TRÌNH GẮN KÍNH (FILE TRỰC TIẾP) --- */}
         <div className="flex flex-col items-center pt-8 border-t border-border">
           <h3 className="text-xl md:text-2xl font-bold text-primary mb-2 uppercase text-center">
             Quy trình gắn kính chuyên nghiệp
@@ -7,7 +69,7 @@
             Cận cảnh thợ Kính Tài thi công trực tiếp cho khách hàng
           </p>
           
-          <div className="w-full max-w-[340px] aspect-[9/16] bg-black rounded-3xl overflow-hidden shadow-2xl border-4 border-card mb-10">
+          <div className="w-full max-w-[340px] aspect-[9/16] bg-black rounded-3xl overflow-hidden shadow-2xl border-4 border-card">
             <video 
               autoPlay 
               muted 
@@ -17,35 +79,15 @@
               className="w-full h-full object-cover"
             >
               <source src="/quy-trinh-gan-kinh.mp4" type="video/mp4" />
+              Trình duyệt của bạn không hỗ trợ xem video.
             </video>
           </div>
           
-          {/* HỆ THỐNG CHI NHÁNH */}
-          <div className="w-full max-w-2xl grid md:grid-cols-2 gap-4">
-            {/* Chi nhánh 1 */}
-            <div className="bg-card p-5 rounded-2xl border border-border shadow-sm">
-              <div className="flex items-center gap-2 text-primary mb-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                <span className="font-bold text-sm uppercase">Chi nhánh Quận 5</span>
-              </div>
-              <p className="text-foreground text-sm leading-relaxed">
-                374 An Dương Vương, Phường 4, Quận 5, TP.HCM
-              </p>
-            </div>
-
-            {/* Chi nhánh 2 */}
-            <div className="bg-card p-5 rounded-2xl border border-border shadow-sm">
-              <div className="flex items-center gap-2 text-primary mb-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                <span className="font-bold text-sm uppercase">Chi nhánh Bình Tân</span>
-              </div>
-              <p className="text-foreground text-sm leading-relaxed">
-                1/117 Đường số 1, KDC Nam Hùng Vương, P. An Lạc, Bình Tân, TP.HCM
-              </p>
-            </div>
-          </div>
-
-          <p className="mt-6 text-muted-foreground text-xs italic">
-            * Hỗ trợ thay kính tận nơi miễn phí tại khu vực TP.HCM
+          <p className="mt-4 text-sm text-muted-foreground">
+            Kính Ô Tô Kính Tài - 15 năm uy tín tại TP.HCM
           </p>
         </div>
+      </div>
+    </section>
+  )
+}
