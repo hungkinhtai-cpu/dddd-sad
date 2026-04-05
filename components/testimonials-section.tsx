@@ -26,7 +26,7 @@ const testimonials = [
 
 export function TestimonialsSection() {
   return (
-    <section id="danh-gia" className="py-16 md:py-24">
+    <section id="danh-gia" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">
@@ -37,7 +37,7 @@ export function TestimonialsSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-16">
           {testimonials.map((item, index) => (
             <div
               key={index}
@@ -58,6 +58,40 @@ export function TestimonialsSection() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* --- PHẦN QUY TRÌNH GẮN KÍNH THỰC TẾ --- */}
+        <div className="flex flex-col items-center pt-8 border-t border-border">
+          <h3 className="text-xl md:text-2xl font-bold text-primary mb-2 uppercase text-center">
+            Quy trình gắn kính chuyên nghiệp
+          </h3>
+          <p className="text-muted-foreground mb-8 italic text-center">
+            Cận cảnh thợ Kính Tài thi công trực tiếp cho khách hàng
+          </p>
+          
+          <div className="w-full max-w-[340px] aspect-[9/16] bg-black rounded-3xl overflow-hidden shadow-2xl border-4 border-card">
+            <iframe 
+              src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fr%2F17Fo94qEw3%2F&show_text=false&width=267&t=0" 
+              width="100%" 
+              height="100%" 
+              style={{ border: 'none', overflow: 'hidden' }} 
+              scrolling="no" 
+              frameBorder="0" 
+              allowFullScreen={true}
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            ></iframe>
+          </div>
+          
+          <div className="mt-6">
+            <a 
+              href="https://www.facebook.com/share/r/17Fo94qEw3/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary font-semibold hover:underline flex items-center gap-2"
+            >
+              Xem clip gốc trên Facebook
+            </a>
+          </div>
         </div>
       </div>
     </section>
