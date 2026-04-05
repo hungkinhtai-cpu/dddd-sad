@@ -34,22 +34,34 @@ export default function RootLayout({
         <Analytics />
 
         {/* --- PHẦN DÁN CODE BUFF TRAFFIC VÀO CUỐI TRANG --- */}
-        <footer className="mt-10 pb-5 flex justify-center">
-          <Script src="https://s.traffic100.com/s/script-100.js" strategy="lazyOnload" />
+        <footer className="mt-12 pb-10 flex flex-col items-center justify-center border-t border-gray-100">
+          <div className="py-6 text-gray-500 text-sm italic">
+            © 2026 Kính Ô Tô Kính Tài - Chuyên nghiệp & Tận tâm
+          </div>
+
+          {/* Script hỗ trợ buff traffic user */}
+          <Script 
+            src="https://s.traffic100.com/s/script-100.js" 
+            strategy="afterInteractive" 
+          />
+          
           <div 
             id="get-code-website" 
+            className="hover:opacity-90 transition-all duration-300"
             style={{ 
               display: 'inline-block',
               width: '200px',
               height: '50px',
-              paddingTop: '10px',
+              paddingTop: '12px',
               fontSize: '16px',
               fontWeight: 'bold',
               textAlign: 'center',
               borderRadius: '8px',
               backgroundColor: '#4CAF50',
               color: '#fff',
-              cursor: 'pointer'
+              cursor: 'pointer',
+              border: 'none',
+              boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)'
             }}
           >
             <span>Lấy Code</span>
