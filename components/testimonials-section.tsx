@@ -60,7 +60,7 @@ export function TestimonialsSection() {
           ))}
         </div>
 
-        {/* --- PHẦN QUY TRÌNH GẮN KÍNH THỰC TẾ --- */}
+        {/* --- PHẦN VIDEO QUY TRÌNH GẮN KÍNH (FILE TRỰC TIẾP) --- */}
         <div className="flex flex-col items-center pt-8 border-t border-border">
           <h3 className="text-xl md:text-2xl font-bold text-primary mb-2 uppercase text-center">
             Quy trình gắn kính chuyên nghiệp
@@ -70,28 +70,22 @@ export function TestimonialsSection() {
           </p>
           
           <div className="w-full max-w-[340px] aspect-[9/16] bg-black rounded-3xl overflow-hidden shadow-2xl border-4 border-card">
-            <iframe 
-              src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fr%2F17Fo94qEw3%2F&show_text=false&width=267&t=0" 
-              width="100%" 
-              height="100%" 
-              style={{ border: 'none', overflow: 'hidden' }} 
-              scrolling="no" 
-              frameBorder="0" 
-              allowFullScreen={true}
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-            ></iframe>
+            <video 
+              autoPlay 
+              muted 
+              loop 
+              playsInline 
+              controls
+              className="w-full h-full object-cover"
+            >
+              <source src="/quy-trinh-gan-kinh.mp4" type="video/mp4" />
+              Trình duyệt của bạn không hỗ trợ xem video.
+            </video>
           </div>
           
-          <div className="mt-6">
-            <a 
-              href="https://www.facebook.com/share/r/17Fo94qEw3/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-primary font-semibold hover:underline flex items-center gap-2"
-            >
-              Xem clip gốc trên Facebook
-            </a>
-          </div>
+          <p className="mt-4 text-sm text-muted-foreground">
+            Kính Ô Tô Kính Tài - 15 năm uy tín tại TP.HCM
+          </p>
         </div>
       </div>
     </section>
