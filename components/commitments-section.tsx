@@ -1,3 +1,5 @@
+"use client"
+import { motion } from "framer-motion"
 import { Shield, Truck, Award, Banknote } from "lucide-react"
 
 const commitments = [
@@ -25,29 +27,48 @@ const commitments = [
 
 export function CommitmentsSection() {
   return (
-    <section className="py-16 md:py-24 bg-muted/50">
+    <section className="py-16 md:py-24 bg-muted/50 overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+        {/* Tiêu đề hiện ra từ trên xuống */}
+        <motion.div 
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">
             4 Cam Kết Của <span className="text-primary">Kính Tài</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Chúng tôi luôn đặt chất lượng và sự hài lòng của khách hàng lên hàng đầu
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {commitments.map((item, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-card p-6 rounded-xl border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300 group"
+              // Hiệu ứng: Trượt từ dưới lên (y: 50 về 0)
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              // transition delay: cái sau hiện sau cái trước 0.2 giây (Stagger)
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+              viewport={{ once: true }}
+              // Khi rê chuột vào: phóng to và nổi lên
+              whileHover={{ 
+                scale: 1.05, 
+                translateY: -10,
+                boxShadow: "0px 10px 30px rgba(0,0,0,0.1)" 
+              }}
+              className="bg-card p-6 rounded-xl border border-border hover:border-primary/50 transition-all duration-300 group cursor-pointer"
             >
-              <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+              <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary transition-all duration-300">
                 <item.icon className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors" />
               </div>
               <h3 className="font-bold text-foreground text-lg mb-2">{item.title}</h3>
               <p className="text-muted-foreground text-sm">{item.description}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
