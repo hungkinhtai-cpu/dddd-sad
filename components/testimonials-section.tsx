@@ -75,7 +75,7 @@ export function TestimonialsSection() {
           <p className="text-muted-foreground">Hình ảnh thi công thực tế tại xưởng Kính Tài Quận 5</p>
         </div>
 
-        {/* PHẦN HIỆN ẢNH RA NGOÀI */}
+        {/* PHẦN HIỆN ẢNH THỰC TẾ */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
           {reviewsWithImages.map((review, index) => (
             <motion.div
@@ -130,7 +130,7 @@ export function TestimonialsSection() {
           )}
         </AnimatePresence>
 
-        <div className="flex justify-center mt-12 mb-16">
+        <div className="flex justify-center mt-12">
           <button 
             onClick={() => setShowMore(!showMore)}
             className="flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground rounded-full font-bold hover:bg-primary/90 transition-all shadow-lg"
@@ -140,16 +140,6 @@ export function TestimonialsSection() {
               <ChevronDown className="w-5 h-5" />
             </motion.div>
           </button>
-        </div>
-
-        {/* VIDEO QUY TRÌNH DƯỚI CÙNG */}
-        <div className="flex flex-col items-center pt-8 border-t border-border">
-          <h3 className="text-xl md:text-2xl font-bold text-primary mb-8 uppercase">Quy trình gắn kính trực tiếp</h3>
-          <div className="w-full max-w-[340px] aspect-[9/16] bg-black rounded-3xl overflow-hidden shadow-2xl border-4 border-card">
-            <video autoPlay muted loop playsInline controls className="w-full h-full object-cover">
-              <source src="/quy-trinh-gan-kinh.mp4" type="video/mp4" />
-            </video>
-          </div>
         </div>
       </div>
     </section>
