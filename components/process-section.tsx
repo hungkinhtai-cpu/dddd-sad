@@ -63,4 +63,27 @@ export function ProcessSection() {
 
         {/* --- PHẦN VIDEO REELS VÀ ĐỊA CHỈ CHI NHÁNH --- */}
         <div className="flex flex-col items-center pt-12 border-t border-primary/10">
-          <h3 className="text-
+          <h3 className="text-xl md:text-2xl font-bold text-primary mb-2 uppercase text-center">
+            Video Quy Trình Thực Tế
+          </h3>
+          <p className="text-muted-foreground mb-8 italic text-center">
+            Cận cảnh thợ Kính Tài thi công chuyên nghiệp cho khách hàng
+          </p>
+          
+          <div className="w-full max-w-[340px] aspect-[9/16] bg-black rounded-3xl overflow-hidden shadow-2xl border-4 border-white mb-12">
+            <video 
+              loop 
+              playsInline 
+              controls
+              preload="none" 
+              poster="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/z7680776802700_f16428e3532f5188f119056345ec8f6a-wp3ieNQq7u8W6m6uT6H8W6m6uT6H8W.jpg" 
+              className="w-full h-full object-cover"
+            >
+              <source src="/quy-trinh-gan-kinh.mp4" type="video/mp4" />
+              Trình duyệt không hỗ trợ xem video.
+            </video>
+          </div>
+          
+          <div className="w-full max-w-4xl grid md:grid-cols-2 gap-6">
+            {/* Chi nhánh 1 */}
+            <div className="bg-card p
