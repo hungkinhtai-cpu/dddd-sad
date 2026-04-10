@@ -9,11 +9,13 @@ const beVietnam = Be_Vietnam_Pro({
   variable: "--font-sans"
 });
 
-// Geist_Mono có thể để đây nếu sau này mày cần dùng cho code block
 const geistMono = Geist_Mono({ 
   subsets: ["latin"],
   variable: "--font-mono",
 });
+
+// Thêm dòng này để ép Vercel chạy Server ở Singapore ngay từ trong Code
+export const preferredRegion = 'sin1';
 
 export const metadata: Metadata = {
   title: 'Kính Ô Tô Kính Tài - Thay Kính Xe Hơi Quận 5 Bình Tân TP.HCM | 15 Năm Uy Tín',
