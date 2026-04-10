@@ -85,5 +85,28 @@ export function ProcessSection() {
           </div>
           
           <div className="w-full max-w-4xl grid md:grid-cols-2 gap-6">
-            {/* Chi nhánh 1 */}
-            <div className="bg-card p
+            <div className="bg-card p-6 rounded-2xl border border-border shadow-sm flex gap-4 items-start">
+              <MapPin className="w-6 h-6 text-primary shrink-0 mt-1" />
+              <div>
+                <p className="font-bold text-foreground uppercase text-sm mb-1">Chi nhánh Quận 5</p>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  374 An Dương Vương, Phường 4, Quận 5, TP.HCM
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-card p-6 rounded-2xl border border-border shadow-sm flex gap-4 items-start">
+              <MapPin className="w-6 h-6 text-primary shrink-0 mt-1" />
+              <div>
+                <p className="font-bold text-foreground uppercase text-sm mb-1">Chi nhánh Bình Tân</p>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  1/117 Đường số 1, KDC Nam Hùng Vương, P. An Lạc, Bình Tân, TP.HCM
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
