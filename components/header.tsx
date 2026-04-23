@@ -2,13 +2,14 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Phone, Menu, X, MessageCircle, Facebook } from "lucide-react"
+import { Phone, Menu, X, MessageCircle, Facebook, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navLinks = [
   { href: "#trang-chu", label: "Trang chủ" },
   { href: "#san-pham", label: "Sản phẩm" },
   { href: "#quy-trinh", label: "Quy trình" },
+  { href: "#han-kinh", label: "Hàn kính 500k" }, // Thêm mục mới ở đây
   { href: "#bao-gia", label: "Báo giá" },
   { href: "#danh-gia", label: "Đánh giá" },
   { href: "#lien-he", label: "Liên hệ" },
@@ -31,13 +32,18 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-foreground/80 hover:text-primary font-medium transition-colors"
+                className={`text-sm font-medium transition-colors flex items-center gap-1 ${
+                  link.href === "#han-kinh" 
+                  ? "text-primary font-bold bg-primary/10 px-4 py-2 rounded-full border border-primary/20 hover:bg-primary/20" 
+                  : "text-foreground/80 hover:text-primary"
+                }`}
               >
+                {link.href === "#han-kinh" && <Sparkles className="w-4 h-4 text-primary" />}
                 {link.label}
               </Link>
             ))}
@@ -95,29 +101,33 @@ export function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="px-4 py-3 text-foreground/80 hover:text-primary hover:bg-muted rounded-lg font-medium transition-colors"
+                  className={`px-4 py-3 rounded-lg font-medium transition-colors ${
+                    link.href === "#han-kinh"
+                    ? "text-primary bg-primary/10 font-bold"
+                    : "text-foreground/80 hover:text-primary hover:bg-muted"
+                  }`}
                 >
                   {link.label}
                 </Link>
               ))}
-              <a
-                href="https://www.facebook.com/share/1K54efbgaz/?mibextid=wwXIfr"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="md:hidden px-4 py-3 text-[#1877F2] hover:bg-muted rounded-lg font-medium transition-colors flex items-center gap-2"
-              >
-                <Facebook className="w-5 h-5" />
-                Facebook
-              </a>
-              <a
-                href="https://zalo.me/0913019397"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="md:hidden px-4 py-3 text-primary hover:bg-muted rounded-lg font-medium transition-colors flex items-center gap-2"
-              >
-                <MessageCircle className="w-5 h-5" />
-                Chat Zalo
-              </a>
+              <div className="grid grid-cols-2 gap-2 mt-2 px-4">
+                <a
+                  href="https://www.facebook.com/share/1K54efbgaz/?mibextid=wwXIfr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 p-3 text-[#1877F2] bg-[#1877F2]/10 rounded-lg text-sm font-bold"
+                >
+                  <Facebook className="w-4 h-4" /> Facebook
+                </a>
+                <a
+                  href="https://zalo.me/0913019397"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 p-3 text-primary bg-primary/10 rounded-lg text-sm font-bold"
+                >
+                  <MessageCircle className="w-4 h-4" /> Zalo
+                </a>
+              </div>
             </div>
           </nav>
         )}
