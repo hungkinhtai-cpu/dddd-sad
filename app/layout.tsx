@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Be_Vietnam_Pro } from 'next/font/google'
-import { Analytics } from '@vercel analytics/next'
+import { Analytics } from '@vercel/analytics/next'
 import Script from 'next/script' 
 import './globals.css'
 
@@ -24,8 +24,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="vi" className={beVietnam.variable}>
-      <head>
-        {/* CHỈ GIỮ LẠI DUY NHẤT MÃ GOOGLE ADS MỚI NHẤT DƯỚI ĐÂY */}
+      {/* KHÔNG DÙNG THẺ <head> Ở ĐÂY NỮA, Metadata của Next.js sẽ tự lo */}
+      <body className="font-sans antialiased">
+        {/* Dán Script vào đây để tránh lỗi SEO và Hydration */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-18065765838"
           strategy="afterInteractive"
@@ -38,8 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             gtag('config', 'AW-18065765838');
           `}
         </Script>
-      </head>
-      <body className="font-sans antialiased">
+
         {children}
         <Analytics />
       </body>
