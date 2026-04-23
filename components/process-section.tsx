@@ -29,9 +29,10 @@ const steps = [
 
 export function ProcessSection() {
   return (
-    <>
+    // Thay thẻ Fragment bằng div để trình duyệt bắt ID tốt hơn
+    <div className="relative">
       {/* --- PHẦN QUY TRÌNH THAY KÍNH --- */}
-      <section id="quy-trinh" className="py-16 md:py-24 bg-primary/5">
+      <section id="quy-trinh" className="py-16 md:py-24 bg-primary/5 scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">
@@ -110,12 +111,13 @@ export function ProcessSection() {
         </div>
       </section>
 
-      {/* --- PHẦN HÀN KÍNH Ô TÔ (MỚI THÊM) --- */}
-      <section id="han-kinh" className="py-16 md:py-24 bg-background">
+      {/* --- PHẦN HÀN KÍNH Ô TÔ (ID NẰM ĐÂY) --- */}
+      {/* scroll-mt-24 giúp tiêu đề không bị dính vào Header khi trượt xuống */}
+      <section id="han-kinh" className="py-16 md:py-24 bg-background scroll-mt-24">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             
-            {/* Cột 1: Hình ảnh so sánh (Tên file: han-kinh-truoc.jpg và han-kinh-sau.jpg) */}
+            {/* Cột 1: Hình ảnh so sánh */}
             <div className="w-full lg:w-1/2">
               <div className="relative group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary to-blue-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
@@ -196,6 +198,6 @@ export function ProcessSection() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   )
 }
