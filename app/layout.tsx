@@ -14,15 +14,28 @@ const beVietnam = Be_Vietnam_Pro({
 export const preferredRegion = 'sin1';
 
 export const metadata: Metadata = {
-  title: 'Hàn Kính 500K & Thay Kính Ô Tô Tận Nơi | Kính Tài Quận 5',
-  description: 'Chuyên hàn kính ô tô nứt giá rẻ và thay kính xe hơi chính hãng tại Quận 5, Bình Tân. Kỹ thuật 15 năm kinh nghiệm, giữ kính zin, bảo hành 12 tháng.',
+  // Tiêu đề bốc để tăng tỷ lệ click từ trang 3 lên trang 1
+  title: 'Hàn Kính Nứt 500K & Thay Kính Ô Tô Tận Nơi | Kính Tài Quận 5 - 15 Năm Uy Tín',
+  description: 'Dịch vụ hàn kính ô tô nứt giá rẻ từ 500k và thay kính xe hơi chính hãng Veltrio tại Quận 5, TPHCM. Kỹ thuật 15 năm kinh nghiệm, phục vụ tận nhà 24/7, giữ kính zin, bảo hành dài hạn.',
+  keywords: [
+    "hàn kính ô tô quận 5",
+    "thay kính xe hơi tphcm",
+    "hàn kính nứt ô tô giá rẻ",
+    "kính ô tô kính tài",
+    "thay kính ô tô tận nơi",
+    "kính xe hơi veltrio"
+  ],
+  metadataBase: new URL('https://kinhototai.com'),
+  alternates: {
+    canonical: '/',
+  },
   icons: {
     icon: '/logo-kinh-tai.jpg',
   },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  // Dữ liệu cấu trúc giúp Google định danh cửa hàng (Boost Ranking Local SEO)
+  // Dữ liệu cấu trúc giúp Google định danh cửa hàng (Cực kỳ quan trọng cho Local SEO)
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AutoRepair",
@@ -48,13 +61,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Sunday"
+        "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
       ],
       "opens": "07:00",
       "closes": "19:00"
@@ -64,12 +71,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="vi" className={beVietnam.variable}>
       <body className="font-sans antialiased">
-        {/* Chèn JSON-LD Schema vào để Google ưu tiên hiển thị Maps và Ranking */}
+        {/* Chèn JSON-LD Schema để Google connect Maps và Web thành một thực thể uy tín */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
 
+        {/* Google Tag Manager / Ads */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-18065765838"
           strategy="afterInteractive"
