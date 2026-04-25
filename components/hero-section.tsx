@@ -36,7 +36,6 @@ export function HeroSection() {
               15 Năm Uy Tín Tại Quận 5 - TP.HCM
             </motion.div>
             
-            {/* Tiêu đề đã tối ưu: Gộp Hàn & Thay */}
             <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight mb-6">
               <span className="text-balance">Hàn Kính 500K &</span>
               <br />
@@ -56,7 +55,7 @@ export function HeroSection() {
               Nhanh chóng - Chuyên nghiệp - Minh bạch giá cả.
             </p>
 
-            {/* Quick Stats: Hiện lần lượt */}
+            {/* Quick Stats */}
             <div className="flex flex-wrap justify-center lg:justify-start gap-6 mb-8">
               {[
                 { icon: Zap, text: "Hàn kính lấy liền 30p" },
@@ -76,7 +75,7 @@ export function HeroSection() {
               ))}
             </div>
 
-            {/* CTA Buttons: Hiệu ứng Hover nhún */}
+            {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 w-full sm:w-auto shadow-lg shadow-primary/20">
@@ -103,7 +102,7 @@ export function HeroSection() {
             </div>
           </motion.div>
 
-          {/* Cột Ảnh: Giữ nguyên hiệu ứng xịn của mày */}
+          {/* Cột Ảnh */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -124,7 +123,6 @@ export function HeroSection() {
               />
             </motion.div>
             
-            {/* Thẻ Floating: Bay từ dưới lên */}
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -136,4 +134,15 @@ export function HeroSection() {
                   <Award className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <p className="font
+                  <p className="font-bold text-foreground text-lg">15 Năm+</p>
+                  <p className="text-muted-foreground text-sm">Kinh nghiệm nghề kính</p>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+
+        </div>
+      </div>
+    </section>
+  )
+}
