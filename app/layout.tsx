@@ -13,9 +13,10 @@ const beVietnam = Be_Vietnam_Pro({
 
 export const preferredRegion = 'sin1';
 
+// PHẦN SEO: Đã gộp cả Hàn và Thay kính để bùng nổ thứ hạng
 export const metadata: Metadata = {
-  title: 'Kính Ô Tô Kính Tài - Thay Kính Xe Hơi Quận 5 | 15 Năm Uy Tín',
-  description: 'Chuyên thay kính xe hơi chính hãng Veltrio tận nơi tại Quận 5, Bình Tân. Bảo hành 12 tháng.',
+  title: 'Hàn Kính 500K & Thay Kính Ô Tô Tận Nơi | Kính Tài Quận 5',
+  description: 'Chuyên hàn kính ô tô nứt giá rẻ và thay kính xe hơi chính hãng tại Quận 5, Bình Tân. Kỹ thuật 15 năm kinh nghiệm, giữ kính zin, bảo hành 12 tháng.',
   icons: {
     icon: '/logo-kinh-tai.jpg',
   },
@@ -24,9 +25,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="vi" className={beVietnam.variable}>
-      {/* KHÔNG DÙNG THẺ <head> Ở ĐÂY NỮA, Metadata của Next.js sẽ tự lo */}
       <body className="font-sans antialiased">
-        {/* Dán Script vào đây để tránh lỗi SEO và Hydration */}
+        {/* Google Tag (gtag.js) cho Google Ads */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-18065765838"
           strategy="afterInteractive"
