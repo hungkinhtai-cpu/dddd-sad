@@ -14,23 +14,22 @@ const beVietnam = Be_Vietnam_Pro({
 export const preferredRegion = 'sin1';
 
 export const metadata: Metadata = {
-  // Tiêu đề tối ưu để bùng nổ từ trang 2 lên trang 1
+  // Tiêu đề đã đổi thành "Thay Kính Ô Tô" chuẩn SEO hơn
   title: 'Hàn Kính Nứt 500K & Thay Kính Ô Tô Tận Nơi | Kính Tài Quận 5 - 15 Năm Uy Tín',
-  description: 'Dịch vụ hàn kính ô tô nứt giá rẻ từ 500k và thay kính xe hơi chính hãng Veltrio tại Quận 5, TPHCM. Kỹ thuật 15 năm kinh nghiệm, phục vụ tận nhà 24/7, giữ kính zin, bảo hành dài hạn.',
+  description: 'Dịch vụ hàn kính ô tô nứt giá rẻ từ 500k và thay kính ô tô chính hãng Veltrio tại Quận 5, TPHCM. Kỹ thuật 15 năm kinh nghiệm, phục vụ tận nhà 24/7, bảo hành dài hạn.',
   keywords: [
     "hàn kính ô tô quận 5",
-    "thay kính xe hơi tphcm",
+    "thay kính ô tô tphcm",
     "hàn kính nứt ô tô giá rẻ",
     "kính ô tô kính tài",
     "thay kính ô tô tận nơi",
-    "kính xe hơi veltrio"
+    "giá thay kính ô tô"
   ],
   metadataBase: new URL('https://kinhototai.com'),
   alternates: {
     canonical: '/',
   },
   icons: {
-    // Đã cập nhật đúng tên file "favicon.ico.jpg" của mày
     icon: '/favicon.ico.jpg',
     shortcut: '/favicon.ico.jpg',
     apple: '/favicon.ico.jpg',
@@ -38,7 +37,6 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  // Dữ liệu cấu trúc giúp Google định danh cửa hàng (Cực kỳ quan trọng cho Local SEO)
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AutoRepair",
@@ -74,13 +72,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="vi" className={beVietnam.variable}>
       <body className="font-sans antialiased">
-        {/* Chèn JSON-LD để Google connect địa chỉ Maps với website */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
 
-        {/* Google Tag Manager / Ads */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-18065765838"
           strategy="afterInteractive"
