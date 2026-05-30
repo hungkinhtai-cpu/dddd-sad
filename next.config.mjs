@@ -4,10 +4,6 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  // Bỏ qua lỗi ESLint khi build
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   images: {
     // Cấu hình để Next.js tối ưu ảnh từ Vercel Blob (Gallery của mày dùng cái này)
     remotePatterns: [
